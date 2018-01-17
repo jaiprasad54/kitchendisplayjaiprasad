@@ -1,0 +1,20 @@
+{
+  "name": "kitchen-display-system",
+  "version": "1.0.0",
+  "description": "This is kitchen display system to manage orders for food delivery",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "Jaiprasad Mungekar <jaiprasad69@yahoo.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9",
+    "socket.io": "^2.0.4"
+  }
+}

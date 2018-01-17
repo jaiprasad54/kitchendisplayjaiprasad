@@ -1,0 +1,148 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'E:\\jaiprasad\\nodejs\\\\node.exe',
+1 verbose cli   'E:\\jaiprasad\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'apidocs' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose node symlink E:\jaiprasad\nodejs\\node.exe
+5 verbose cache add [ 'apidocs', null ]
+6 verbose cache add name=undefined spec="apidocs" args=["apidocs",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'apidocs',
+7 verbose parsed url   path: 'apidocs',
+7 verbose parsed url   href: 'apidocs' }
+8 silly lockFile 52e08259-apidocs apidocs
+9 verbose lock apidocs C:\Users\Prasad\AppData\Roaming\npm-cache\52e08259-apidocs.lock
+10 silly lockFile 52e08259-apidocs apidocs
+11 silly lockFile 52e08259-apidocs apidocs
+12 verbose addNamed [ 'apidocs', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile ac53a19e-apidocs apidocs@
+15 verbose lock apidocs@ C:\Users\Prasad\AppData\Roaming\npm-cache\ac53a19e-apidocs.lock
+16 silly addNameRange { name: 'apidocs', range: '*', hasData: false }
+17 verbose request where is /apidocs
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 6f85ec0565cc9f44
+20 verbose url raw /apidocs
+21 verbose url resolving [ 'https://registry.npmjs.org/', './apidocs' ]
+22 verbose url resolved https://registry.npmjs.org/apidocs
+23 verbose request where is https://registry.npmjs.org/apidocs
+24 info trying registry request attempt 1 at 10:23:23
+25 http GET https://registry.npmjs.org/apidocs
+26 http 200 https://registry.npmjs.org/apidocs
+27 silly registry.get cb [ 200,
+27 silly registry.get   { 'content-type': 'application/json; charset=UTF-8',
+27 silly registry.get     server: 'UploadServer',
+27 silly registry.get     'cache-control': 'max-age=300',
+27 silly registry.get     'last-modified': 'Mon, 17 Apr 2017 22:46:55 GMT',
+27 silly registry.get     etag: '"58f545df-436c"',
+27 silly registry.get     'content-encoding': 'gzip',
+27 silly registry.get     'content-length': '3627',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Sat, 20 Jan 2018 04:53:28 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-ams4420-AMS',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1516424008.287485,VS0,VE177',
+27 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+28 silly addNameRange number 2 { name: 'apidocs', range: '*', hasData: true }
+29 silly addNameRange versions [ 'apidocs', [ '0.0.1', '2017.2.28', '2017.2.27', '2017.3.9' ] ]
+30 verbose addNamed [ 'apidocs', '2017.3.9' ]
+31 verbose addNamed [ '2017.3.9', '2017.3.9' ]
+32 silly lockFile 5573e97f-apidocs-2017-3-9 apidocs@2017.3.9
+33 verbose lock apidocs@2017.3.9 C:\Users\Prasad\AppData\Roaming\npm-cache\5573e97f-apidocs-2017-3-9.lock
+34 warn deprecated apidocs@2017.3.9: this package is deprecated and superseded by [apidoc-lite](https://www.npmjs.com/package/apidoc-lite)
+35 silly lockFile a14354e6-org-apidocs-apidocs-2017-3-9-tgz https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz
+36 verbose lock https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz C:\Users\Prasad\AppData\Roaming\npm-cache\a14354e6-org-apidocs-apidocs-2017-3-9-tgz.lock
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz',
+37 verbose addRemoteTarball   'e417d46e80a2d8c4acebcadfc487b82c0ef18c22' ]
+38 info retry fetch attempt 1 at 10:23:24
+39 verbose fetch to= C:\Users\Prasad\AppData\Local\Temp\npm-3768-0UTyQoa4\registry.npmjs.org\apidocs\-\apidocs-2017.3.9.tgz
+40 http GET https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz
+41 http 200 https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz
+42 silly lockFile a14354e6-org-apidocs-apidocs-2017-3-9-tgz https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz
+43 silly lockFile a14354e6-org-apidocs-apidocs-2017-3-9-tgz https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz
+44 silly lockFile 5573e97f-apidocs-2017-3-9 apidocs@2017.3.9
+45 silly lockFile 5573e97f-apidocs-2017-3-9 apidocs@2017.3.9
+46 silly lockFile ac53a19e-apidocs apidocs@
+47 silly lockFile ac53a19e-apidocs apidocs@
+48 silly resolved [ { author: { name: 'kai zhu', email: 'kaizhu256@gmail.com' },
+48 silly resolved     bin: { 'apidoc-lite': 'lib.apidoc.js' },
+48 silly resolved     description: 'this zero-dependency package will auto-generate documentation for your npm-package with zero-config',
+48 silly resolved     devDependencies:
+48 silly resolved      { 'electron-lite': 'github:kaizhu256/node-electron-lite#alpha',
+48 silly resolved        utility2: 'github:kaizhu256/node-utility2#alpha' },
+48 silly resolved     engines: { node: '>=4.0' },
+48 silly resolved     homepage: 'https://github.com/kaizhu256/node-apidoc-lite',
+48 silly resolved     keywords:
+48 silly resolved      [ 'api-doc',
+48 silly resolved        'apidoc',
+48 silly resolved        'doc',
+48 silly resolved        'documentation',
+48 silly resolved        'doxygen',
+48 silly resolved        'javadoc' ],
+48 silly resolved     license: 'MIT',
+48 silly resolved     main: 'lib.apidoc.js',
+48 silly resolved     name: 'apidocs',
+48 silly resolved     nameAlias: 'apidoc',
+48 silly resolved     nameOriginal: 'apidoc-lite',
+48 silly resolved     os: [ 'darwin', 'linux' ],
+48 silly resolved     readmeParse: '1',
+48 silly resolved     repository:
+48 silly resolved      { type: 'git',
+48 silly resolved        url: 'git+https://github.com/kaizhu256/node-apidoc-lite.git' },
+48 silly resolved     scripts:
+48 silly resolved      { 'build-ci': 'utility2 shReadmeTest build_ci.sh',
+48 silly resolved        env: 'env',
+48 silly resolved        'heroku-postbuild': 'npm install \'kaizhu256/node-utility2#alpha\' && utility2 shDeployHeroku',
+48 silly resolved        postinstall: 'if [ -f lib.apidoc.npm_scripts.sh ]; then ./lib.apidoc.npm_scripts.sh postinstall; fi',
+48 silly resolved        'publish-alias': 'VERSION=$(npm info $npm_package_name version); for ALIAS in api_doc apidocs api-doctor doctor-api npm-doc npmdoc; do utility2 shNpmPublishAs . $ALIAS $VERSION; utility2 shNpmTestPublished $ALIAS || exit $?; done',
+48 silly resolved        start: 'export PORT=${PORT:-8080} && export npm_config_mode_auto_restart=1 && utility2 start',
+48 silly resolved        test: 'export PORT=$(utility2 shServerPortRandom) && utility2 test test.js' },
+48 silly resolved     version: '2017.3.9',
+48 silly resolved     bugs: { url: 'https://github.com/kaizhu256/node-apidoc-lite/issues' },
+48 silly resolved     _id: 'apidocs@2017.3.9',
+48 silly resolved     _shasum: 'e417d46e80a2d8c4acebcadfc487b82c0ef18c22',
+48 silly resolved     _from: 'apidocs@',
+48 silly resolved     _npmVersion: '4.1.2',
+48 silly resolved     _nodeVersion: '7.7.2',
+48 silly resolved     _npmUser: { name: 'kaizhu', email: 'kaizhu256@gmail.com' },
+48 silly resolved     dist:
+48 silly resolved      { shasum: 'e417d46e80a2d8c4acebcadfc487b82c0ef18c22',
+48 silly resolved        tarball: 'https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz' },
+48 silly resolved     maintainers: [ [Object] ],
+48 silly resolved     _npmOperationalInternal:
+48 silly resolved      { host: 'packages-12-west.internal.npmjs.com',
+48 silly resolved        tmp: 'tmp/apidocs-2017.3.9.tgz_1489149176194_0.4918971958104521' },
+48 silly resolved     deprecated: 'this package is deprecated and superseded by [apidoc-lite](https://www.npmjs.com/package/apidoc-lite)',
+48 silly resolved     directories: {},
+48 silly resolved     _resolved: 'https://registry.npmjs.org/apidocs/-/apidocs-2017.3.9.tgz' } ]
+49 info install apidocs@2017.3.9 into C:\Users\Prasad\AppData\Roaming\npm
+50 info installOne apidocs@2017.3.9
+51 warn engine apidocs@2017.3.9: wanted: {"node":">=4.0"} (current: {"node":"0.10.35","npm":"1.4.28"})
+52 error notsup Unsupported
+52 error notsup Not compatible with your operating system or architecture: apidocs@2017.3.9
+52 error notsup Valid OS:    darwin,linux
+52 error notsup Valid Arch:  any
+52 error notsup Actual OS:   win32
+52 error notsup Actual Arch: ia32
+53 error System Windows_NT 6.1.7600
+54 error command "E:\\jaiprasad\\nodejs\\\\node.exe" "E:\\jaiprasad\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "apidocs"
+55 error cwd E:\jaiprasad\project\nodejs\faas\fas1901_d
+56 error node -v v0.10.35
+57 error npm -v 1.4.28
+58 error code EBADPLATFORM
+59 verbose exit [ 1, true ]

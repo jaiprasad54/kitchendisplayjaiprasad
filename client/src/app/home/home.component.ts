@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { pick,groupBy,map } from 'lodash';
+import * as io from 'socket.io-client';
+import { environment } from '../../environments/environment';
 
 import {ProductService} from '../product.service';
 import {OrderService} from '../order.service';
@@ -10,42 +12,49 @@ import {OrderService} from '../order.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private orders:any[] = [];
-  private products:any = {};
+  private socket;
+  private orders: any[] = [];
+  private products: any = {};
   list:any[] = [];
   toEditId: any = {};
 
   constructor(private orderService: OrderService, private productService: ProductService) { }
   
   ngOnInit() {
+    
   	this.getDashboardData();
+    console.log('connecting socket');
+    this.socket = io.connect(environment.socketServerUrl);
+    //get updates from server if order data is updated
+    var self = this;
+    this.socket.on('orderUpdated', result => {
+        console.log('order updated', result);
+        if(result)
+          self.getDashboardData();
+    })
   }
 
   private getDashboardData(){
 
   	this.orderService.getTodaysOrders()
   					 .then((orders) => {
-  					 	console.log('resp orders', orders, this);
-  					 	this.orders = orders;
-  					 	let productIds = map(orders, 'product_id');
-              console.log('productIds', productIds);
-  					 	return this.productService.getProductsByIds(productIds);
+    					 	this.orders = orders;
+    					 	let productIds = map(orders, 'product_id');
+                
+    					 	return this.productService.getProductsByIds(productIds);
   					 })  	
   					 .then(products => {this.products = groupBy(products, '_id')})
   					 .then(() => {
-  					 	console.log('this.orders', this.orders, this.products);
   					 	this.orders.map(order => {
   					 		order.product = this.products[order['product_id']] && this.products[order['product_id']][0];
   					 	});
 
-  					 	console.log('this.orders', this.orders);
   					 	this.list = this.orders;
   					 });
   }
 
   EditOrder(order: any){
     if(!order) return;
-    console.log('in edit order', order);
     order.status='done';
     this.orderService.updateOrder(order)
                      .then((order)=>{

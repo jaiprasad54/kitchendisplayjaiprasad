@@ -10,7 +10,7 @@ const mongoose = require('mongoose');
 //Prepare Product Collection schema
 var Schema = mongoose.Schema;
 var ProductSchema = new Schema({
-	_id: {type: Schema.ObjectId},
+	_id: false, //{type: Schema.ObjectId},
 	name: {type: String, required: true},
 	stock: {type: Number, default: 0},
 	predicted: {type: Number, required: true},

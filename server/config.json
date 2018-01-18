@@ -1,12 +1,12 @@
 {
-	"port": 80,
+	"port": 3000,
 	"apiRoot": "/api",
 	"clientDir": "../client/",
 	"db": {
-		"host": "ds111598.mlab.com",
-		"port": 11598,
-		"username": "mongouser",
-		"password": "pass123",
+		"host": "localhost",
+		"port": 27017,
+		"username": "",
+		"password": "",
 		"dbname": "kitchendisplay"
 	}
 }

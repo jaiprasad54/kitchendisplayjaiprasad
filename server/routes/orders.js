@@ -25,7 +25,6 @@ var router = express.Router();
  */
 router.get('/', function(req, res){
 	let filter = {};
-	
 	if(req.query.date){
 		filter.created = {"$gte": req.query.date};
 	}
@@ -92,6 +91,9 @@ router.post('/', function(req, res){
 			console.error(err);
 			return res.status(err.statusCode).send(err.message);
 		}
+		if(req.io){
+			req.io.sockets.emit('orderUpdated', results.save);
+		}
 		res.json(results.save);
 	})
 	
@@ -146,6 +148,10 @@ router.put('/:id', function(req, res){
 			return res.status(503).send('UPDATE_FAILED');
 		}else if(!result){
 			return res.status(404).send('ORDER_NOT_EXIST');
+		}
+
+		if(req.io){
+			req.io.sockets.emit('orderUpdated', result);
 		}
 		res.json(result);
 	})

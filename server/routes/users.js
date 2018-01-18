@@ -23,12 +23,12 @@ var router = express.Router();
  * @apiSuccess {Array} List of Users Instance.
  */
 router.get('/', function(req, res){
-	bcrypt.genSalt(10, function(err, salt){
+	/*bcrypt.genSalt(10, function(err, salt){
 		console.log('random salt', salt);
 		bcrypt.hash("pass123", salt, function(err, hash){
 			console.log('generate hash for pass: pass123', hash);
 		})
-	})
+	})*/
 	var filter = req.query.filter;
 	User.find(filter, function(err, results){
 		if(err){

@@ -10,6 +10,7 @@ const async = require('async');
 const Product = require('../models/product');
 
 var router = express.Router();
+var ObjectId = require('mongoose').Types.ObjectId; 
 
 /**
  * @api {get} /api/products List all products or filtered products based on filter object
@@ -30,7 +31,7 @@ router.get('/', function(req, res){
 	let filter = {};
 	let id = req.query.id;
 	if(req.query.id){
-		filter._id = {$in: req.query.id.split(',')} 
+		filter._id = {"$in": req.query.id.split(',').map(function(id){ return new ObjectId(id)})} 
 	}
 
 	if(req.query.date){
@@ -45,6 +46,7 @@ router.get('/', function(req, res){
 		if(req.query[field])
 			filter[field] = req.query[field];
 	});
+	console.log('filter', filter);
    
     Product.find(filter, function(err, results){
 		if(err){
@@ -94,6 +96,7 @@ router.get('/:id', function(req, res){
 router.post('/', function(req, res){
 	let productInst = new Product(req.body);
 	productInst.save(function(err, result){
+		console.log('error', err);
 		if(err && err.code==11000){
 			return res.status(409).send('PRODUCT_ALREADY_EXIST');
 		} else if(err){

@@ -10,20 +10,12 @@ export class OrderService {
   
   getTodaysOrders(): Promise<any>{
   	let currentDate = this.getDateTimeInFormat(new Date());
-    console.log('currentDate', currentDate);
-    console.log('url',this.apiUrl+'?date='+currentDate+'&status=pending');
-  	return this.http.get(this.apiUrl+'?date='+currentDate+'&status=pending')
+    return this.http.get(this.apiUrl+'?date='+currentDate+'&status=pending')
   			 .toPromise()
   			 .then(this.handleData)
   			 .catch(this.handleError)
   }
 
-  /*createTodo(todo:any): Promise<any>{
-    return this.http.post(this.apiUrl, todo)
-               .toPromise()
-               .then(this.handleData)
-               .catch(this.handleError)
-  }*/
   updateOrder(order:any):Promise<any>{
     return this.http
                .put(this.apiUrl+'/'+order._id, order)
@@ -33,14 +25,11 @@ export class OrderService {
   }
 
   handleData(res: any){
-    console.log('in handle data');
     let body = res.json();
-    console.log('body', body);
     return body || {};
   }
 
   handleError(err: any){
-    console.log('in error',err);
     return Promise.reject(err.message || err);
   }
 

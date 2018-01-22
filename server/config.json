@@ -3,10 +3,10 @@
 	"apiRoot": "/api",
 	"clientDir": "../client/",
 	"db": {
-		"host": "localhost",
-		"port": 27017,
-		"username": "",
-		"password": "",
+		"host": "ds111598.mlab.com",
+		"port": 11598,
+		"username": "mongouser",
+		"password": "pass123",
 		"dbname": "kitchendisplay"
 	}
 }
